@@ -1,0 +1,18 @@
+# ------ Colors that I customized ---------
+# Green prompt symbol if the last command succeeded.
+typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=78
+# Red prompt symbol if the last command failed.
+typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=210
+
+# Version control background colors.
+typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=15
+typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=183
+typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=2
+typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=183
+typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=8
+
+# Current directory background color.
+typeset -g POWERLEVEL9K_DIR_BACKGROUND=85
+typeset -g POWERLEVEL9K_DIR_FOREGROUND=236
+typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=236
+typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=232
