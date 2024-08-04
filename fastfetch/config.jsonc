@@ -23,9 +23,7 @@
     "memory",
     "disk",
     "localip",
-    "battery",
-    "poweradapter",
     "break",
-    "colors"
-  ]
+    "colors",
+  ],
 }

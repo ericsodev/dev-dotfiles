@@ -92,7 +92,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,7 +139,9 @@ alias "lg=lazygit"
 eval "$(zoxide init zsh --cmd c)"
 
 
+# Plugin management via homebrew
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Created by `pipx` on 2024-04-29 00:56:23
 export PATH="$PATH:/Users/eric/.local/bin"
