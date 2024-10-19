@@ -148,3 +148,6 @@ export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 # Install at https://github.com/catppuccin/zsh-syntax-highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
+# ohmyposh prompt
+export OH_MY_POSH_CONFIG="~/dotfiles/ohmyposh/themes/powerline.omp.json"
+eval "$(oh-my-posh init zsh --config $OH_MY_POSH_CONFIG)"
