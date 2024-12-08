@@ -153,10 +153,10 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 NPM_TOKEN_SOURCE="~/export_npm_token.sh"     
-if [ -f $FILE ]; then
+if [ -f $NPM_TOKEN_SOURCE ]; then
    source $NPM_TOKEN_SOURCE
 fi
 
 # ohmyposh prompt
-export OH_MY_POSH_CONFIG="~/dotfiles/ohmyposh/themes/powerline.omp.json"
+export OH_MY_POSH_CONFIG="~/dotfiles/ohmyposh/themes/json.omp.json"
 eval "$(oh-my-posh init zsh --config $OH_MY_POSH_CONFIG)"
