@@ -1,5 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#ffffff",
+    "template": "> "
+  },
   "blocks": [
     {
       "alignment": "left",
@@ -43,6 +48,42 @@
         }
       ],
       "type": "prompt"
+    }
+  ],
+  "tooltips": [
+    {
+      "alignment": "right",
+      "type": "aws",
+      "style": "powerline",
+      "tips": ["terraform", "aws", "tfswitch"],
+      "background": "#252F3E",
+      "foreground": "#FF9900",
+      "powerline_symbol": "",
+      "leading_powerline_symbol": "",
+      "segments": [
+        {
+          "type": "aws",
+          "powerline_symbol": "",
+          "template": "  {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+        }
+      ]
+    },
+    {
+      "alignment": "right",
+      "type": "terraform",
+      "style": "powerline",
+      "tips": ["terraform", "tfswitch"],
+      "foreground": "#7B42BC",
+      "background": "#F2F2F3",
+      "powerline_symbol": "",
+      "leading_powerline_symbol": "",
+      "segments": [
+        {
+          "type": "terraform",
+          "style": "powerline",
+          "template": " {{.WorkspaceName}}"
+        }
+      ]
     }
   ],
   "final_space": true,
