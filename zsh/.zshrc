@@ -1,10 +1,4 @@
 #fastfetch
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 
 export FZF_BASE="/opt/homebrew/opt/fzf"
@@ -30,7 +24,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -131,9 +124,6 @@ alias "py=python3"
 
 [ -f "/Users/eric/.ghcup/env" ] && source "/Users/eric/.ghcup/env" # ghcup-env
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 alias "v=nvim"
 alias "lg=lazygit"
 eval "$(zoxide init zsh --cmd c)"
@@ -166,3 +156,7 @@ NPM_TOKEN_SOURCE="~/export_npm_token.sh"
 if [ -f $FILE ]; then
    source $NPM_TOKEN_SOURCE
 fi
+
+# ohmyposh prompt
+export OH_MY_POSH_CONFIG="~/dotfiles/ohmyposh/themes/powerline.omp.json"
+eval "$(oh-my-posh init zsh --config $OH_MY_POSH_CONFIG)"
