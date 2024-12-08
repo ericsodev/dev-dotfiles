@@ -5,39 +5,41 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#91ddff",
-          "foreground": "#100e23",
-          "powerline_symbol": "\ue0b0",
+          "foreground": "#F1FA8C",
           "properties": {
-            "style": "full"
+            "style": "folder"
           },
-          "style": "powerline",
-          "template": " {{ .Path }} ",
+          "style": "diamond",
+          "template": "<#42E66C>\ueaf7 </><b>{{ .Path }}</b>",
           "type": "path"
         },
         {
-          "background": "#95ffa4",
-          "foreground": "#193549",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
-          "template": " {{ .HEAD }} ",
+          "foreground": "#43CCEA",
+          "properties": {
+            "branch_icon": ""
+          },
+          "style": "diamond",
+          "template": "<#ffffff> \u26A1 </><b>{{ .HEAD }}</b>",
           "type": "git"
         },
         {
-          "background": "#906cff",
-          "foreground": "#100e23",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
-          "type": "python"
-        },
+          "foreground": "#ff0000",
+          "style": "diamond",
+          "template": "<#ff0000> \u25C9</>",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
         {
-          "background": "#ff8080",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
-          "template": " \ue20f ",
-          "type": "status"
+          "foreground": "#FFFFFF",
+          "style": "plain",
+          "template": ">",
+          "type": "text"
         }
       ],
       "type": "prompt"
