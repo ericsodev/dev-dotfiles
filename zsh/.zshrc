@@ -157,3 +157,12 @@ export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 # Install at https://github.com/catppuccin/zsh-syntax-highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+NPM_TOKEN_SOURCE="~/export_npm_token.sh"     
+if [ -f $FILE ]; then
+   source $NPM_TOKEN_SOURCE
+fi
