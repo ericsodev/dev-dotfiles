@@ -152,9 +152,9 @@ export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
-NPM_TOKEN_SOURCE="~/export_npm_token.sh"     
+NPM_TOKEN_SOURCE="$HOME/export_npm_token.sh"     
 if [ -f $NPM_TOKEN_SOURCE ]; then
-   source $NPM_TOKEN_SOURCE
+   source "$NPM_TOKEN_SOURCE"
 fi
 
 # ohmyposh prompt
