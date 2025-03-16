@@ -10,7 +10,7 @@ return {
     -- Useful status updates for LSP.
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
     { 'j-hui/fidget.nvim', opts = {} },
-	'saghen/blink.cmp',
+    'saghen/blink.cmp',
 
     -- Allows extra capabilities provided by nvim-cmp
     -- 'hrsh7th/cmp-nvim-lsp',
@@ -28,7 +28,6 @@ return {
           mode = mode or 'n'
           vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
         end
-
 
         -- Rename the variable under your cursor.
         --  Most Language Servers support renaming across files, etc.

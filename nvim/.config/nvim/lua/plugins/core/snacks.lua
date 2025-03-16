@@ -55,6 +55,7 @@ return {
     { 'gI', function() Snacks.picker.lsp_implementations() end, desc = 'Goto Implementation' },
     { 'gy', function() Snacks.picker.lsp_type_definitions() end, desc = 'Goto T[y]pe Definition' },
     -- Other
+    { '<leader>te', function() Snacks.explorer() end },
     { '<leader>gg', function() Snacks.lazygit() end, desc = 'Lazygit' },
     { '<leader>un', function() Snacks.notifier.hide() end, desc = 'Dismiss All Notifications' },
   },
