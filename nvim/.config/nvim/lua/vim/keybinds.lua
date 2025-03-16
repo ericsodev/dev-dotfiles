@@ -34,8 +34,6 @@ vim.keymap.set('v', '<', '<gv', { desc = 'Keep visual mode after shifts', norema
 -- Yank to void register
 vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'Yank to void register' })
 
-vim.keymap.set('n', '<leader>pc', ':Telescope colorscheme<Enter>', { desc = 'Search colorschemes' })
-
 -- Center after jump
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
