@@ -27,9 +27,9 @@ return {
     }
 
     -- Keymaps
-    vim.keymap.set('n', 'tc', ':CodeCompanionChat<enter>', { desc = '[T]oggle [C]hat' })
-    vim.keymap.set('n', 'cca', ':CodeCompanionActions<enter>', { desc = '[C]ode [C]ompanion [A]ctions' })
-    vim.keymap.set('x', 'ccp', ':CodeCompanion<enter>', { desc = '[C]ode [C]ompanion [P]rompt' })
+    vim.keymap.set('n', '<leader>tc', ':CodeCompanionChat Toggle<enter>', { desc = '[T]oggle [C]hat' })
+    vim.keymap.set('n', '<leader>cca', ':CodeCompanionActions<enter>', { desc = '[C]ode [C]ompanion [A]ctions' })
+    vim.keymap.set('x', '<leader>ccp', ':CodeCompanion<enter>', { desc = '[C]ode [C]ompanion [P]rompt' })
 
     -- Events
     local group = vim.api.nvim_create_augroup('CodeCompanionHooks', {})
