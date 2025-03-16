@@ -12,8 +12,27 @@ return {
     dashboard = { enabled = true },
     explorer = { enabled = true },
     indent = { enabled = true },
-    input = { enabled = true },
-    picker = { enabled = true },
+    input = { enabled = false },
+    picker = {
+      enabled = true,
+      win = {
+        input = {
+          keys = {
+            ['<C-o>'] = { 'oil', mode = { 'n', 'i' } },
+          },
+        },
+      },
+      actions = {
+        oil = function(picker)
+          local oil = require 'oil'
+
+          local dir_name = vim.fs.dirname(picker.list._current.file)
+          picker:close()
+
+          oil.open(dir_name, {}, function() end)
+        end,
+      },
+    },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
