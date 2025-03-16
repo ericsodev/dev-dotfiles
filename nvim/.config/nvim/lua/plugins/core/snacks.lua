@@ -11,7 +11,7 @@ return {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
     explorer = { enabled = true },
-    indent = { enabled = true },
+    indent = { enabled = false },
     input = { enabled = false },
     picker = {
       enabled = true,
@@ -28,6 +28,7 @@ return {
 
           local dir_name = vim.fs.dirname(picker.list._current.file)
           picker:close()
+          oil.close {}
 
           oil.open(dir_name, {}, function() end)
         end,
@@ -35,8 +36,12 @@ return {
     },
     notifier = { enabled = true },
     quickfile = { enabled = true },
-    scope = { enabled = true },
-    scroll = { enabled = false },
+    scope = {
+      enabled = false,
+    },
+    scroll = {
+      enabled = false,
+    },
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
@@ -48,6 +53,7 @@ return {
     { '<leader>sm', function() Snacks.picker.marks() end, desc = 'Marks' },
     { '<leader>ss', function() Snacks.picker.lsp_symbols() end, desc = 'LSP Symbols' },
     { '<leader>sS', function() Snacks.picker.lsp_workspace_symbols() end, desc = 'LSP Workspace Symbols' },
+    { '<leader>st', function() Snacks.picker.treesitter() end, desc = 'LSP Workspace Symbols' },
     -- LSP
     { 'gd', function() Snacks.picker.lsp_definitions() end, desc = 'Goto Definition' },
     { 'gD', function() Snacks.picker.lsp_declarations() end, desc = 'Goto Declaration' },
@@ -55,8 +61,9 @@ return {
     { 'gI', function() Snacks.picker.lsp_implementations() end, desc = 'Goto Implementation' },
     { 'gy', function() Snacks.picker.lsp_type_definitions() end, desc = 'Goto T[y]pe Definition' },
     -- Other
-    { '<leader>te', function() Snacks.explorer() end },
-    { '<leader>gg', function() Snacks.lazygit() end, desc = 'Lazygit' },
+    { '<leader>tt', function() Snacks.terminal() end, desc = '[T]oggle [T]erminal' },
+    { '<leader>te', function() Snacks.explorer() end, desc = '[T]oggle [E]xplorer' },
+    { '<leader>lg', function() Snacks.lazygit() end, desc = '[L]azy[G]it' },
     { '<leader>un', function() Snacks.notifier.hide() end, desc = 'Dismiss All Notifications' },
   },
 }
