@@ -29,4 +29,4 @@ require('lazy').setup {
 }
 
 -- Themes
-vim.cmd.colorscheme 'kanagawa'
+vim.cmd.colorscheme 'catppuccin'
