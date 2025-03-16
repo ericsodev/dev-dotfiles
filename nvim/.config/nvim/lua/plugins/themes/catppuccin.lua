@@ -253,6 +253,21 @@ return {
           FzfLuaCursorLine = { bg = colors.surface2 },
           FzfLuaLivePrompt = { fg = colors.red },
 
+          -- Snacks specific
+          SnacksPickerMatch = { fg = colors.red, style = { 'italic' } },
+          SnacksPickerInput = { fg = colors.text, bg = colors.crust },
+          SnacksPickerInputTitle = { fg = colors.text, bg = colors.overlay0, style = { 'bold' } },
+          SnacksPickerInputBorder = { fg = colors.text, bg = colors.crust },
+          SnacksPickerList = { bg = colors.crust },
+          SnacksPickerListBorder = { bg = colors.crust, fg = colors.crust },
+          SnacksPickerListTitle = { fg = colors.mantle, bg = colors.green, style = { 'bold' } },
+          SnacksPickerListcolorsursorLine = { bg = colors.surface2 },
+          SnacksInputBorder = { bg = colors.base, fg = colors.peach },
+          SnacksInputTitle = { bg = colors.base, fg = colors.peach },
+          SnacksInputIcon = { bg = colors.base, fg = colors.peach },
+          SnacksInputNormal = { bg = colors.base, fg = colors.text },
+          SnacksPickerPreviewTitle = { bg = colors.mauve, fg = colors.mantle },
+
           ['@annotation'] = { link = 'TSAnnotation' },
           ['@attribute'] = { link = 'TSAttribute' },
           ['@boolean'] = { link = 'TSBoolean' },

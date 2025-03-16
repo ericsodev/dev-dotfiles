@@ -1,5 +1,5 @@
----@module "snacks"
 return {
+  ---@module "snacks"
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
@@ -15,6 +15,39 @@ return {
     input = { enabled = false },
     picker = {
       enabled = true,
+      layout = {
+        reverse = false,
+        layout = {
+          box = 'horizontal',
+          backdrop = { blend = 70, bg = '#000000' },
+          width = 0.8,
+          height = 0.9,
+          border = 'none',
+          {
+            box = 'vertical',
+            {
+              win = 'input',
+              title = ' {source} {live} ',
+              title_pos = 'center',
+              border = 'vpad',
+              height = 1,
+            },
+            {
+              win = 'list',
+              title = '  Results  ',
+              title_pos = 'center',
+              border = 'top',
+            },
+          },
+          {
+            win = 'preview',
+            width = 0.45,
+            title_pos = 'center',
+            border = 'vpad',
+            title = '  {preview}  ',
+          },
+        },
+      },
       win = {
         input = {
           keys = {
