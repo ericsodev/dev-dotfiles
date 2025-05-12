@@ -31,6 +31,9 @@ return {
     vim.keymap.set('n', '<leader>cca', ':CodeCompanionActions<enter>', { desc = '[C]ode [C]ompanion [A]ctions' })
     vim.keymap.set('x', '<leader>ccp', ':CodeCompanion<enter>', { desc = '[C]ode [C]ompanion [P]rompt' })
 
+    -- Specific prompts while in visual select
+    vim.keymap.set('x', '<leader>ccd', ':CodeCompanion add documentation and comments for the selected code<enter>', { desc = '[C]ode [C]ompanion [D]ocument' })
+
     -- Events
     local group = vim.api.nvim_create_augroup('CodeCompanionHooks', {})
 
