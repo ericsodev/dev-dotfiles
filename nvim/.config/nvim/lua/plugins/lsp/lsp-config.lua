@@ -192,6 +192,13 @@ return {
           },
         },
       },
+      html = {
+        ensure_installed = true,
+        filetypes = { 'html', 'templ' },
+      },
+      tailwindcss = {
+        filetypes = { 'html', 'templ', 'javascript', 'typescript', 'react', 'svelte' },
+      },
     }
 
     -- Ensure the servers and tools above are installed
