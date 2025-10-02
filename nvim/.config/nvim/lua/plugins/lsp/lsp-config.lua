@@ -115,6 +115,7 @@ return {
     local servers = {
       -- clangd = {},
       -- gopls = {},
+      golangci_lint_ls = { filetypes = { 'go' } },
       pyright = {},
       rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -196,8 +197,11 @@ return {
         ensure_installed = true,
         filetypes = { 'html', 'templ' },
       },
+      htmx = {
+        filetypes = { 'html', 'templ' },
+      },
       tailwindcss = {
-        filetypes = { 'html', 'templ', 'javascript', 'typescript', 'react', 'svelte' },
+        filetypes = { 'html', 'templ', 'javascript', 'typescript', 'react', 'svelte', 'typescriptreact' },
       },
     }
 
