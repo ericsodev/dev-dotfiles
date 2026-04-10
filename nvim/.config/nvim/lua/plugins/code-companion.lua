@@ -24,13 +24,6 @@ return {
           })
         end,
       },
-      extensions = {
-        vectorcode = {
-          opts = {
-            add_tool = true,
-          },
-        },
-      },
     }
 
     -- Keymaps
