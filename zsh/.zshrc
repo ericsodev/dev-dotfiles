@@ -160,3 +160,37 @@ fi
 # ohmyposh prompt
 export OH_MY_POSH_CONFIG="~/dotfiles/ohmyposh/themes/json.omp.json"
 eval "$(oh-my-posh init zsh --config $OH_MY_POSH_CONFIG)"
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+
+alias air='$(go env GOPATH)/bin/air'
+
+# bun completions
+[ -s "/Users/eric/.bun/_bun" ] && source "/Users/eric/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# random path exports
+export PATH="$/opt/homebrew/opt/riscv-gnu-toolchain/bin:$PATH" # riscv toolchain
+export PATH="/opt/homebrew/opt/bison/bin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH" # make
+
+# pnpm
+export PNPM_HOME="/Users/eric/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
