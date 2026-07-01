@@ -20,13 +20,16 @@ return {
     }
 
     -- Update LSP diagnostics after tag name update
-    vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-      underline = true,
-      virtual_text = {
+    vim.lsp.handlers['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
+      config = config or {}
+      config.underline = true
+      config.virtual_text = {
         spacing = 5,
-        min = 'severity',
-      },
-      update_in_insert = true,
-    })
+        severity = { min = vim.diagnostic.severity.WARN },
+      }
+      config.update_in_insert = true
+
+      vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+    end
   end,
 }
