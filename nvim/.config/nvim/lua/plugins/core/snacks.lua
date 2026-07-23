@@ -10,11 +10,17 @@ return {
     -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = { enabled = true },
-    explorer = { enabled = true },
+    ---@type snacks.picker.explorer.Config
+    explorer = {
+      enabled = false,
+      trash = true,
+      layout = { preset = 'sidebar' },
+    },
     indent = { enabled = false },
     input = { enabled = false },
     picker = {
       enabled = true,
+      sources = { explorer = { layout = { layout = { position = 'left', width = 0.3, max_width = 50 } } } },
       layout = {
         reverse = false,
         layout = {
@@ -97,7 +103,7 @@ return {
     { '<leader>lg', function() Snacks.lazygit() end, desc = '[L]azy[G]it' },
     -- Other
     { '<leader>tt', function() Snacks.terminal() end, desc = '[T]oggle [T]erminal' },
-    { '<leader>te', function() Snacks.explorer() end, desc = '[T]oggle [E]xplorer' },
+    -- { '<leader>te', function() Snacks.explorer() end, desc = '[T]oggle [E]xplorer' },
     { '<leader>un', function() Snacks.notifier.hide() end, desc = 'Dismiss All Notifications' },
   },
 }
