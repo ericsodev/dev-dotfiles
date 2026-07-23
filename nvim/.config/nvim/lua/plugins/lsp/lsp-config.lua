@@ -6,12 +6,6 @@ local servers = {
   ts_ls = {},
   eslint = {},
   vtsls = {
-    filetypes = {
-      'javascript',
-      'javascriptreact',
-      'typescript',
-      'typescriptreact',
-    },
     settings = {
       complete_function_calls = true,
       vtsls = {
